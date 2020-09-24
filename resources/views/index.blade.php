@@ -72,7 +72,7 @@
       @endforeach
     </div>
     <div class="container container__centered">
-      <a href="/blog/" class="blog--view-all">see all news and updates</a>
+      <a href="/news/" class="blog--view-all">see all news and updates</a>
     </div>
   </div>
 </section>
