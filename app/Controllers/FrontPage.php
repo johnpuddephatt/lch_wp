@@ -15,7 +15,7 @@ class FrontPage extends Controller
 
         return array_map(function ($post) {
             $post->post_excerpt = get_the_excerpt($post->ID);
-            $post->thumbnail = get_the_post_thumbnail($post->ID, 'square');
+            $post->thumbnail = get_the_post_thumbnail($post->ID, '16x9');
             $post->link = get_the_permalink($post->ID);
             return $post;
         }, $latest_posts);

@@ -59,7 +59,7 @@
     <div class="container--blog">
       @foreach($posts as $post)
         <a href="{!! $post->link !!}" class="blog--item box" data-aos="fade-up" data-aos-ratio=".25" data-aos-delay="≤≤ forloop.index | minus: 1 |  times:200 ≥≥">
-          <div class="projects-grid--image">
+          <div class="blog--item--image">
             {!! $post->thumbnail !!}
           </div>
           <div class="blog--item--date">{{ date(get_option( 'date_format' ), strtotime($post->post_date))   }}</div>

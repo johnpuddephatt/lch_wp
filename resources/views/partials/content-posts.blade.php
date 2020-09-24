@@ -1,8 +1,7 @@
 <div class="container container__desktop">
-
   <div class="content">
     @foreach($posts as $post)
-      <a href="{!! $post->link !!}" class="card card__pages-list-item">
+      <a href="{!! $post->url !!}" class="card card__pages-list-item">
         <div class="card-image">
           {!! $post->thumbnail !!}
         </div>
@@ -14,5 +13,4 @@
       </a>
     @endforeach
   </div>
-
 </div>
