@@ -9,7 +9,6 @@
     @endif
 
     @if($page->icon)
-
       <img class="page--icon" src="{!! $page->icon !!}">
     @endif
 
