@@ -40,6 +40,8 @@ class App extends Controller
         foreach($sections as $section) {
             $section->pages = get_posts([
                 'post_type' => 'page',
+                'order' => 'ASC',
+                'posts_per_page'=> -1,
                 'tax_query' => array(
                     array(
                         'taxonomy' => 'section',
