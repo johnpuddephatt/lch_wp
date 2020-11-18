@@ -20,14 +20,26 @@
       <nav class="navbar-menu _social">
 
         @if(get_theme_mod('facebook'))
-          <a class="navbar-item social-icon" href="//facebook.com/{{ get_theme_mod('facebook') }}" target="_blank">
+          <a title="Facebook" class="navbar-item social-icon" href="//facebook.com/{{ get_theme_mod('facebook') }}" target="_blank">
             @include('images.facebook')
           </a>
         @endif
 
         @if(get_theme_mod('twitter'))
-          <a class="navbar-item social-icon" href="//twitter.com/{{ get_theme_mod('twitter') }}" target="_blank">
+          <a title="Twitter" class="navbar-item social-icon" href="//twitter.com/{{ get_theme_mod('twitter') }}" target="_blank">
             @include('images.twitter')
+          </a>
+        @endif
+
+        @if(get_theme_mod('youtube'))
+          <a title="YouTube" class="navbar-item social-icon" href="{{ get_theme_mod('twitter') }}" target="_blank">
+            @include('images.youtube')
+          </a>
+        @endif
+
+        @if(get_theme_mod('instagram'))
+          <a title="Instagram" class="navbar-item social-icon" href="//www.instagram.com/{{ get_theme_mod('instagram') }}" target="_blank">
+            @include('images.instagram')
           </a>
         @endif
 
