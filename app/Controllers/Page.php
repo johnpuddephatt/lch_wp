@@ -28,7 +28,7 @@ class Page extends Controller
 
         $pages = get_posts([
             'post_type' => 'page',
-            'numberposts' => '4',
+            'numberposts' => '-1',
             'exclude' => get_the_ID(),
             'order' => 'ASC',
             'tax_query' => array(

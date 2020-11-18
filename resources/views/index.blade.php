@@ -10,7 +10,7 @@
           @include('images.cityscape')
         </div>
         <div class="hero-text">
-          <h1 class="title">We’re starting a people powered homes revolution</h1>
+          <h1 class="title">{{ get_bloginfo('description') }}</h1>
           <a href="#work" class="button button--hero">Find out how</a>
         </div>
       </div>

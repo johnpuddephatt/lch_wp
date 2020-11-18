@@ -1,8 +1,9 @@
 .site-footer {
   margin-top: $spacer;
-  padding: 2 * $spacer 0 0;
+  padding: 2 * $spacer 0;
   border-top: $base-border;
   position: relative;
+  background-color: $primary;
 
   .container {
     display: flex;
@@ -17,6 +18,10 @@
 
 .footer-left {
   flex: 0 0 50%;
+
+  a {
+    text-decoration: underline;
+  }
 
   h3 {
     font-weight: $weight-bold;
@@ -63,8 +68,9 @@
 }
 
 .secondary-footer {
-  padding-top: 1.5 * $spacer;
-  padding-bottom: $spacer;
+  border-top: $base-border;
+  padding-top: $spacer/2;
+  padding-bottom: $spacer/2;
   background-color: white;
   display: flex;
   text-align: center;
@@ -102,6 +108,10 @@
   }
 
   &.wide {
+    flex: 0 1 15%;
+  }
+
+  &.x-wide {
     flex: 0 1 20%;
   }
 

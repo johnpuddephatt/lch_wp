@@ -175,7 +175,7 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
       $wp_customize->add_setting(
         'twitter',
         array(
-          'default' => '',
+          'default' => 'https://twitter.com/LeedsCommHomes',
           'sanitize_callback' => 'sanitize_text_field'
         )
       );
@@ -193,7 +193,7 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
       $wp_customize->add_setting(
         'facebook',
         array(
-          'default' => '',
+          'default' => 'https://www.facebook.com/LeedsCommunityHomes/',
           'sanitize_callback' => 'sanitize_text_field'
         )
       );
@@ -221,6 +221,42 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
           'label' => 'LinkedIn',
           'section' => 'social',
           'settings' => 'linkedin'
+        )
+      );
+
+      $wp_customize->add_setting(
+        'instagram',
+        array(
+          'default' => 'https://www.instagram.com/leedscommunityhomes/',
+          'sanitize_callback' => 'sanitize_text_field'
+        )
+      );
+
+
+      $wp_customize->add_control(
+        'instagram',
+        array(
+          'label' => 'Instagram',
+          'section' => 'social',
+          'settings' => 'instagram'
+        )
+      );
+
+      $wp_customize->add_setting(
+        'youtube',
+        array(
+          'default' => '',
+          'sanitize_callback' => 'sanitize_text_field'
+        )
+      );
+
+
+      $wp_customize->add_control(
+        'youtube',
+        array(
+          'label' => 'YouTube',
+          'section' => 'social',
+          'settings' => 'youtube'
         )
       );
 

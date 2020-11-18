@@ -1,12 +1,12 @@
 .page-header {
   text-align: center;
-  padding-top: 3 * $spacer;
+  padding-top: 2 * $spacer;
   position: relative;
 
   .page-back {
     text-align: left;
     margin-top: -$spacer;
-    margin-bottom: 2 * $spacer;
+    margin-bottom: 1.5 * $spacer;
   }
 
   &--description {
@@ -61,7 +61,7 @@
   display: block;
   width: 9 * $spacer;
   height: auto;
-  margin: $spacer/2 auto $spacer;
+  margin: 0 auto $spacer/2;
 }
 
 .page--thumbnail {
