@@ -42,15 +42,11 @@
         script.src = url + data;
         document.body.appendChild(script); // Callback function
 
-        var callback = 'callback';
-
-        window[callback] = function (data) {
-          // Remove post script from the DOM
-          delete window[callback];
-          document.body.removeChild(script); // Display response message
+        setTimeout(()=>{
           form.classList.add('is-hidden');
           success.classList.remove('is-hidden');
-        };
+        }, 1500);
+
       }
 
       let submit = document.querySelector('input[type="submit"]');
