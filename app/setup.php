@@ -178,4 +178,81 @@ add_action('after_setup_theme', function () {
     }
     add_action( 'init', 'App\section_taxonomy');
 
+    function register_shortcodes(){
+       add_shortcode('membership', function() {
+           return '
+           <div class="success-message hidden">
+              Successfully submitted.
+            </div>
+
+            <form action="https://leedscommunityhomes.us12.list-manage.com/subscribe/post?u=704bc039805a3c6f06c77e27a&id=914751a7ec" method="post" target="_blank" novalidate="">
+
+              <div class="field field__email">
+                <label class="label" for="mce-EMAIL">Email Address<sup>*</sup></label>
+                <div class="control">
+                  <input class="input" type="email" name="EMAIL" id="mce-EMAIL" value="" placeholder="Email" required>
+                </div>
+              </div>
+              <div class="field field__fname">
+                <label class="label" for="mce-FNAME">First Name<sup>*</sup></label>
+                <div class="control">
+                  <input class="input" type="text" name="FNAME" id="mce-FNAME" value="" placeholder="First name" required>
+                </div>
+              </div>
+              <div class="field field__lname">
+                <label class="label" for="mce-LNAME">Last Name<sup>*</sup></label>
+                <div class="control">
+                  <input class="input" type="text" name="LNAME" id="mce-LNAME" value="" placeholder="Last name" required>
+                </div>
+              </div>
+
+              <div class="field field__membertype">
+                <label class="label" for="mce-membertype">Membership type</label>
+                <div class="control">
+                  <div class="select">
+                    <select name="MEMBERTYPE" id="mce-membertype">
+                      <option value="Individual">Individual</option>
+                      <option value="Organisation">Organisation</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field field__org_name hidden">
+                <label class="label" for="mce-ORG_NAME">Organisation name</label>
+                <div class="control">
+                  <input class="input" type="text" name="ORG_NAME" id="mce-ORG_NAME" placeholder="Name of organisation">
+                </div>
+              </div>
+
+              <div class="field field__agree_rule">
+                <label class="label" for="mce-agree_rule">I support the rules & objectives of Leeds Community Homes.</label>
+                <div class="control">
+                  <div class="select">
+                    <select name="AGREE_RULE" id="mce-agree_rule">
+                      <option value="No">No</option>
+                      <option value="Yes">Yes</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field field__contact_me">
+                <label class="label" for="mce-contact_me">I give Leeds Community Homes permission to contact me as a member.</label>
+                <div class="control">
+                  <div class="select">
+                    <select name="CONTACT_ME" id="mce-contact_me">
+                      <option value="No">No</option>
+                      <option value="Yes">Yes</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <input class="button" type="submit">
+            </form>
+           ';
+       });
+    }
+
 });
