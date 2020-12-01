@@ -17,5 +17,20 @@
 .wp-block-button__link {
   @extend .button;
 
+  border-color: $black;
   font-size: 1.2rem;
+  border: 1px solid $gray;
+
+  &:active,
+  &:focus,
+  &:hover,
+  &:visited {
+    color: $black;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    border-color: $black;
+  }
 }

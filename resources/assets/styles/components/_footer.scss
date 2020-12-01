@@ -41,10 +41,19 @@
 
 .footer-navigation {
   flex: 0 0 40%;
-  margin-left: 2 * $spacer;
+  margin-top: $spacer;
+
+  @media screen and (orientation: landscape) {
+    margin-top: 0;
+    margin-left: 2 * $spacer;
+  }
 
   .menu-item {
     padding-top: 0 !important;
+
+    @media screen and (orientation: portrait) {
+      padding-left: 0 !important;
+    }
 
     a {
       font-size: ms(0);
@@ -88,11 +97,22 @@
   align-items: center;
   justify-content: flex-start;
   flex-direction: row;
+
+  @media screen and (orientation: portrait) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 .footer-logo-link {
-  flex: 0 1 5%;
+  flex: 0 1 10%;
   margin-right: $spacer;
+
+  @media screen and (orientation: portrait) {
+    margin-top: $spacer;
+    margin-right: $spacer/2;
+    margin-left: $spacer/2;
+  }
 
   @media screen and (min-width: $desktop) {
     margin-right: $spacer/2;
@@ -103,20 +123,20 @@
   }
 
   &.xl {
-    flex: 0 1 26%;
+    flex: 0 1 52%;
     margin-right: 2 * $spacer;
   }
 
   &.wide {
-    flex: 0 1 15%;
+    flex: 0 1 30%;
   }
 
   &.x-wide {
-    flex: 0 1 20%;
+    flex: 0 1 40%;
   }
 
   &.medium {
-    flex: 0 1 10%;
+    flex: 0 1 20%;
   }
 
   &:last-child {
