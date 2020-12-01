@@ -1,7 +1,6 @@
 {{--
   Template Name: Membership
 --}}
-
 @extends('layouts.app')
 
 @section('content')
@@ -49,8 +48,8 @@
           // Remove post script from the DOM
           delete window[callback];
           document.body.removeChild(script); // Display response message
-          form.classList.add('hidden');
-          success.classList.remove('hidden');
+          form.classList.add('is-hidden');
+          success.classList.remove('is-hidden');
         };
       }
 
@@ -65,7 +64,7 @@
       let organisation_name_field = document.querySelector('.field__org_name');
 
       membership_type_input.addEventListener('change', ()=>{
-        organisation_name_field.classList.toggle('hidden');
+        organisation_name_field.classList.toggle('is-hidden');
       });
     </script>
 @endsection

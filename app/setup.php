@@ -181,8 +181,8 @@ add_action('after_setup_theme', function () {
     function register_shortcodes(){
        add_shortcode('membership', function() {
            return '
-           <div class="success-message hidden">
-              Successfully submitted.
+           <div class="success-message is-hidden notification is-primary">
+              Application successfully submitted.
             </div>
 
             <form action="https://leedscommunityhomes.us12.list-manage.com/subscribe/post?u=704bc039805a3c6f06c77e27a&id=914751a7ec" method="post" target="_blank" novalidate="">
@@ -218,7 +218,7 @@ add_action('after_setup_theme', function () {
                 </div>
               </div>
 
-              <div class="field field__org_name hidden">
+              <div class="field field__org_name is-hidden">
                 <label class="label" for="mce-ORG_NAME">Organisation name</label>
                 <div class="control">
                   <input class="input" type="text" name="ORG_NAME" id="mce-ORG_NAME" placeholder="Name of organisation">
