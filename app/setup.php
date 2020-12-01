@@ -255,4 +255,7 @@ add_action('after_setup_theme', function () {
        });
     }
 
+    add_action( 'init', 'App\register_shortcodes');
+
+
 });
