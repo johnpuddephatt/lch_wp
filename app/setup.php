@@ -249,7 +249,7 @@ add_action('after_setup_theme', function () {
                 </div>
               </div>
 
-              <input class="button" type="submit">
+              <input class="button is-primary is-medium" type="submit">
             </form>
            ';
        });
