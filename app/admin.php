@@ -94,13 +94,6 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
             )
         );
 
-      $wp_customize->get_setting('address')->transport = 'postMessage';
-      $wp_customize->selective_refresh->add_partial('address', [
-          'selector' => '.address',
-          'render_callback' => function () {
-              echo get_theme_mod('address', 'no address set');
-          }
-      ]);
       $wp_customize->add_setting(
         'address',
         array(
@@ -117,6 +110,15 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
           'settings' => 'address'
         )
       );
+
+      $wp_customize->get_setting('address')->transport = 'postMessage';
+      $wp_customize->selective_refresh->add_partial('address', [
+          'selector' => '.address',
+          'render_callback' => function () {
+              echo get_theme_mod('address', 'no address set');
+          }
+      ]);
+
 
       $wp_customize->add_setting(
         'phonenumber_humans',
