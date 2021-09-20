@@ -20,27 +20,30 @@
       <nav class="navbar-menu _social">
 
         @if(get_theme_mod('facebook'))
-          <a title="Facebook" class="navbar-item social-icon" href="//facebook.com/{{ get_theme_mod('facebook') }}" target="_blank">
-            @include('images.facebook')
-          </a>
+        <a title="Facebook" class="navbar-item social-icon" href="//facebook.com/{{ get_theme_mod('facebook') }}"
+          target="_blank">
+          @include('images.facebook')
+        </a>
         @endif
 
         @if(get_theme_mod('twitter'))
-          <a title="Twitter" class="navbar-item social-icon" href="//twitter.com/{{ get_theme_mod('twitter') }}" target="_blank">
-            @include('images.twitter')
-          </a>
+        <a title="Twitter" class="navbar-item social-icon" href="//twitter.com/{{ get_theme_mod('twitter') }}"
+          target="_blank">
+          @include('images.twitter')
+        </a>
         @endif
 
         @if(get_theme_mod('youtube'))
-          <a title="YouTube" class="navbar-item social-icon" href="{{ get_theme_mod('twitter') }}" target="_blank">
-            @include('images.youtube')
-          </a>
+        <a title="YouTube" class="navbar-item social-icon" href="{{ get_theme_mod('youtube') }}" target="_blank">
+          @include('images.youtube')
+        </a>
         @endif
 
         @if(get_theme_mod('instagram'))
-          <a title="Instagram" class="navbar-item social-icon" href="//www.instagram.com/{{ get_theme_mod('instagram') }}" target="_blank">
-            @include('images.instagram')
-          </a>
+        <a title="Instagram" class="navbar-item social-icon" href="//www.instagram.com/{{ get_theme_mod('instagram') }}"
+          target="_blank">
+          @include('images.instagram')
+        </a>
         @endif
 
       </nav>
@@ -59,18 +62,18 @@
           </div>
 
           @foreach( $primary_navigation as $section )
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link" href="/section/{{ $section->slug }}/">
-                {{$section->name}}
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link" href="/section/{{ $section->slug }}/">
+              {{$section->name}}
+            </a>
+            <div class="navbar-dropdown">
+              @foreach($section->pages as $page)
+              <a class="navbar-item " href="{{$page->url}}">
+                {{$page->post_title}}
               </a>
-              <div class="navbar-dropdown">
-                @foreach($section->pages as $page)
-                  <a class="navbar-item " href="{{$page->url}}">
-                    {{$page->post_title}}
-                  </a>
-                @endforeach
-              </div>
+              @endforeach
             </div>
+          </div>
           @endforeach
         </div>
         @if (has_nav_menu('secondary_navigation'))
