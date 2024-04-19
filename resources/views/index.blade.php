@@ -41,7 +41,7 @@
     <div class="newsletter-text">
       <h3 class="title _large">Follow our progress</h3>
       <p>We want to help create 1000 permanently affordable homes. Sign up to our newsletter to stay up to date.</p>
-      <form id="mc-embedded-subscribe-form" class="newsletter-signup--form" action="https://leedscommunityhomes.us12.list-manage.com/subscribe/post?u=93ce5fb1f178a607501f44054&id=5f8363d512" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank" _lpchecked="1">
+      <form id="mc-embedded-subscribe-form" class="newsletter-signup--form" action="https://leedscommunityhomes.us12.list-manage.com/subscribe?u=704bc039805a3c6f06c77e27a&id=eec13774d3" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank" _lpchecked="1">
         <label class="sr-only" for="mce-EMAIL">Email address</label>
         <input id="mce-EMAIL" type="text" name="EMAIL" placeholder="enter your email address">
         <button class="button button--orange" id="mc-embedded-subscribe" name="subscribe" type="submit">Subscribe</button>
